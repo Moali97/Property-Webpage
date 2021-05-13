@@ -17,8 +17,10 @@ from django.contrib import admin
 from django.urls import path, include
 
 from propertyapp import views
+from propertylistings import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('propertyapp.urls')),
+    path('', include('propertylistings.urls')),
 ]
