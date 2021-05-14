@@ -1,7 +1,9 @@
 {% extends 'base.html'%}
 
 {% block content %}
-
-    <h1>These are the available houses</h1>
-
+{% if searched %}
+    <h1>These are proeprties in {{ searched }}</h1>
+{% else %}
+    <h1>Sorry could not be fund</h1>
+{% endif %}
 {% endblock content %}
