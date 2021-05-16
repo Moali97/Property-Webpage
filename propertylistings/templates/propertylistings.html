@@ -1,9 +1,16 @@
 {% extends 'base.html'%}
 
 {% block content %}
+
 {% if searched %}
-    <h1>These are proeprties in {{ searched }}</h1>
-{% else %}
-    <h1>Sorry could not be fund</h1>
-{% endif %}
+        <h1>These are the properties found in {{ searched }}</h1>
+        <br/>
+    {% for listing in listings %}
+        {{ listing }}<br/>
+    {% endfor %}
+
+    {% else %}
+        <h1>Sorry item(s) you searched for could not be found</h1>
+    {% endif %}
+
 {% endblock content %}
