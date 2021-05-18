@@ -35,3 +35,13 @@ body,
  padding: 85px;
  margin: 25px;
 }
+
+/*properties*/
+#properties{
+ display: inline-block;
+ padding: 50px;
+}
+
+#properties{
+ width: 288px;
+}
