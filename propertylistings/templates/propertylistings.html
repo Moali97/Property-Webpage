@@ -10,8 +10,10 @@
    <div id="properties">
     <div class="card" style="width: 18rem;">
     {% load static %}
-      <img class="card-img-top" src="" alt="Card image cap">
-
+      <!--<img class="card-img-top" src="" alt="Card image cap">-->
+         {% if listing.picture %}
+       <img src="{{ listing.picture.url }}">
+        {% endif %}
       <div class="card-body">
         <h5 class="card-title">{{ listing }}<br/>
                                {{ listing.address }}<br/></h5>
