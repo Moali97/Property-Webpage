@@ -5,11 +5,13 @@
 {% if searched %}
         <h1>These are the properties found in {{ searched }}</h1>
         <br/>
-    {% for listing in listings %}
+    <!--{% for listing in listings %}-->
 
    <div id="properties">
     <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="..." alt="Card image cap">
+    {% load static %}
+      <img class="card-img-top" src="" alt="Card image cap">
+
       <div class="card-body">
         <h5 class="card-title">{{ listing }}<br/>
                                {{ listing.address }}<br/></h5>
@@ -18,10 +20,12 @@
      </div>
     </div>
 
-    {% endfor %}
+    <!--{% endfor %}-->
 
     {% else %}
         <h1>Not Found, Please make sure you have filled in the correct search fields.</h1>
-    {% endif %}
+{% endif %}
 
 {% endblock content %}
+
+<!--{% static 'images/property.jpeg'%}-->
