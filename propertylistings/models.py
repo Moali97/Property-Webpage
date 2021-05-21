@@ -7,6 +7,7 @@ class Propertydetails(models.Model):
     address = models.CharField(max_length = 200)
     bedrooms = models.IntegerField()
     bathrooms = models.IntegerField(default=1)
+    property_type = models.CharField(max_length = 25, default='')
     picture = models.ImageField(null=True, blank=True, upload_to="images2/")
 
     class Meta:
