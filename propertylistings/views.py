@@ -12,7 +12,8 @@ def search_listings(request):
 
         return render(request, 'propertylistings.html',
                       {'searched': searched,
-                       'listings': listings})
+                       'listings': listings}
+                       )
     else:
 
         return render(request, 'propertylistings.html', {})
