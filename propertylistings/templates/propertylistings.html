@@ -3,35 +3,37 @@
 {% block content %}
 
 {% if searched %}
-        <h1>These are the properties found in {{ searched }}</h1>
-        <br/>
-    <!--{% for listing in listings %}-->
 
-   <div id="properties">
-    <div class="card" style="width: 18rem;">
-    {% load static %}
-         {% if listing.picture %}
-       <img src="{{ listing.picture.url }}">
-        {% endif %}
-      <div class="card-body">
-        <h5 class="card-title">{{ listing }}<br/>
-                               {{ listing.address }}<br/>
-           {{ listing.description }}
-          {{ listing.bedrooms }}
-           {{ listing.bathrooms }}
-          {{listing.property_type }}</h5>
+        <h1>These are the properties found in {{ searched|title }}</h1><br/>
 
-      </div>
-      </div>
-     </div>
-    </div>
 
-    <!--{% endfor %}-->
+           <!--{% for listing in listings %}-->
+           <div id="properties">
+            <div class="card" style="width: 18rem;">
+               {% load static %}
+               {% if listing.picture %}
+                 <img src="{{ listing.picture.url }}">
+                    {% endif %}
+                        <div class="card-body">
+                         <ul>
+                            <p>{{ listing.address }}</p>
+                            <p> Bedrooms:{{ listing.bedrooms }}
+                            <p>Bathrooms:{{ listing.bathrooms }}
+                            <p>{{ listing.property_type }}</p>
+                            <p>{{ listing }}</p>
+                         </ul>
+                    </div>
+                 </div>
+               </div>
+             </div>
+         <!--{{ listing.description }}-->
+            <!--{% endfor %}-->
 
     {% else %}
+
         <h1>Not Found, Please make sure you have filled in the correct search fields.</h1>
+
 {% endif %}
 
 {% endblock content %}
 
-<!--{% static 'images/property.jpeg'%}-->
