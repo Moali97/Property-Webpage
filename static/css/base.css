@@ -43,5 +43,14 @@ body,
 }
 
 #properties{
- width: 288px;
+ width: 295px
+}
+
+#properties, p{
+   margin-bottom: 0rem;
+}
+
+img {
+  height: 300px;
+  overflow: hidden;
 }
