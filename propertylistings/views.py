@@ -9,11 +9,12 @@ def search_listings(request):
         searched = request.POST['searched']
 
         listings = Propertydetails.objects.filter(city__contains=searched)
+        context = {'searched': searched,
+                   'listings': listings,
+                  }
 
-        return render(request, 'propertylistings.html',
-                      {'searched': searched,
-                       'listings': listings}
-                       )
+        return render(request, 'propertylistings.html', context)
+
     else:
 
         return render(request, 'propertylistings.html', {})
