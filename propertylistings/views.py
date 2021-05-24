@@ -19,3 +19,4 @@ def search_listings(request):
 
         return render(request, 'propertylistings.html', {})
 
+#web: gunicorn propertyweb.wsgi --log-file -

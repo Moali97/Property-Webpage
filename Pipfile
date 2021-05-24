@@ -9,6 +9,7 @@ requests = "*"
 pillow = "*"
 gunicorn = "*"
 whitenoise = "*"
+django-waitress = "*"
 
 [dev-packages]
 

@@ -1,1 +1,1 @@
-web: gunicorn propertyweb.wsgi --log-file -
+web: waitress-serve --port=$PORT propertyweb.wsgi:application
