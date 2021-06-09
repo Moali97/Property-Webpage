@@ -127,7 +127,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # put images2
 # HTTPS settings
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
-SECURE_SSL_REDIRECT = True
+#SECURE_SSL_REDIRECT = True
 
 # HSTS settings
 SECURE_HSTS_SECONDS = 31536000  # 1 year
