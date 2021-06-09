@@ -12,7 +12,7 @@
             <div class="card" style="width: 18rem;">
                {% load static %}
                {% if listing.picture %}
-                 <img src="{{% static listing.picture.url %}}">
+                 <img src="{{ listing.picture.url }}">
                     {% endif %}
                         <div class="card-body">
                          <ul>
