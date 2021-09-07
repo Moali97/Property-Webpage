@@ -9,6 +9,7 @@ class Propertydetails(models.Model):
     bathrooms = models.IntegerField(default=1)
     property_type = models.CharField(max_length = 25, default='')
     picture = models.ImageField(null=True, blank=True, upload_to="media/")
+    Property_status = models.CharField(max_length = 25, default='')
 
     class Meta:
         verbose_name_plural = "Propertydetails"
